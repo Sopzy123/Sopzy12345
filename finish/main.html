@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>okok - home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="aight.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+            <a href="main.html"><img src="img/lotus_logo.png" class="img-lotus"></a>
+        
+            <input class="menu-btn" type="checkbox" id="menu-btn"/>
+            <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+            <ul class="menu">
+                <li><a href="language.html">Language Introductory</a></li>
+                <li><a href="culture.html">Culture + Food</a></li>
+                <li><a href="history.html">History</a></li>
+            </ul>
+        </header>
+    <br>
+    <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <a href="main.html"><div class="numbertext">1 / 4</div>
+        <img src="img/main.jpg" style="width:100%"></a>
+  </div>
+
+  <div class="mySlides fade">
+    <a href="language.html"><div class="numbertext">2 / 4</div>
+    <img src="img/lang2.jpg" style="width:100%"></a>
+  </div>
+
+  <div class="mySlides fade">
+    <a href="culture.html"><div class="numbertext">3 / 4</div>
+    <img src="img/cult2.jpg" style="width:100%"></a>
+  </div>
+    
+    <div class="mySlides fade">
+    <a href="history.html"><div class="numbertext">4 / 4</div>
+    <img src="img/hist2.jpg" style="width:100%"></a>
+  </div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+
+</div>
+    
+    <script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+    
+    <!--
+    <div id="content">
+        <div class="one" img="homebackg.jpg/coding">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">Hello hunay 4</div>
+        <div class="five">5</div>
+        <div class="six">6</div>
+    </div>-->
+    </body>
